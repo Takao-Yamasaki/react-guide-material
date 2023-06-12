@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  react:
+    container_name: react
+    build: .
+    working_dir: /workspace
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/workspace
+    # 開発用コンテナのため、コンテナ起動を継続させたいため
+    tty: true
